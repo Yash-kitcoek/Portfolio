@@ -6,7 +6,7 @@ const featured = {
   title: "DigitalHeroes",
   tag: "Internship Task — Agency Landing Page",
   description:
-    "A modern, fully responsive agency landing page built as part of an internship assignment. The project demonstrates clean UI design principles — structured layout, consistent typography, smooth scroll behaviour, and a polished hero section — all built from scratch without any CSS framework. Focused on writing semantic HTML and well-organised vanilla CSS to create a professional, cross-browser-compatible product.",
+    "A modern, fully responsive agency landing page built as part of an internship assignment. Demonstrates clean UI design principles — structured layout, consistent typography, smooth scroll behaviour, and a polished hero section — all crafted from scratch without any CSS framework. Focused on semantic HTML and well-organised vanilla CSS to deliver a professional, cross-browser-compatible product.",
   tech: ["HTML5", "CSS3", "JavaScript"],
   features: [
     "Semantic HTML structure",
@@ -26,7 +26,7 @@ const projects = [
     title: "GoTrip",
     tag: "Full-Stack Property Rental Platform",
     description:
-      "A full-stack property rental web app where users can list, browse, and book rental properties. Implements complete CRUD operations, session-based authentication with Passport.js, cloud image uploads via Cloudinary, and map-based listings using Mapbox — all deployed on Render.",
+      "A full-stack property rental platform where users can list, browse, and book properties. Built with the MERN stack featuring complete CRUD operations, session-based authentication via Passport.js, cloud image uploads through Cloudinary, and interactive map-based listings powered by Mapbox.",
     tech: ["MongoDB", "Express.js", "Node.js", "JavaScript", "Mongoose", "Cloudinary", "Mapbox", "CSS"],
     features: [
       "Session-based auth (Passport.js)",
@@ -34,17 +34,17 @@ const projects = [
       "Cloudinary image uploads",
       "Mapbox location display",
       "Review & rating system",
-      "Deployed on Render",
+      "Deployed on Vercel",
     ],
     icon: MapPin,
-    demo: "#",
+    demo: "https://go-trip-gamma.vercel.app/listings",
     github: "https://github.com/Yash-kitcoek/GoTrip",
   },
   {
     title: "FindMate",
     tag: "Campus Lost & Found Portal",
     description:
-      "A role-based web portal that lets students report lost items and search for found ones within a campus environment. Built with the MVC pattern using Node.js and MongoDB, it features separate admin and student dashboards, image upload support, and a keyword-based search system.",
+      "A role-based web portal enabling students to report lost items and search for found ones across campus. Built on the MVC pattern with Node.js and MongoDB, featuring separate admin and student dashboards, image upload support, and keyword-based search and filtering.",
     tech: ["MongoDB", "Express.js", "Node.js", "Bootstrap", "JavaScript", "Mongoose"],
     features: [
       "Role-based auth (Admin / Student)",
@@ -55,7 +55,7 @@ const projects = [
       "Responsive Bootstrap UI",
     ],
     icon: Search,
-    demo: "#",
+    demo: "https://findmate.onrender.com/",
     github: "https://github.com/Yash-kitcoek/FindMate",
   },
 ];
@@ -66,7 +66,7 @@ export function Projects() {
       id="projects"
       eyebrow="Projects"
       title="Featured Work"
-      subtitle="A selection of things I've designed, built, and shipped."
+      subtitle="Things I've designed, built, and shipped."
     >
       {/* ── Featured project — full-width card ── */}
       <motion.article
@@ -120,7 +120,7 @@ export function Projects() {
                 rel="noreferrer"
                 className="inline-flex items-center gap-1.5 bg-gradient-primary text-primary-foreground px-5 py-2.5 rounded-xl text-sm font-medium hover:shadow-glow transition-all"
               >
-                <ExternalLink className="w-4 h-4" /> Live Demo
+                <ExternalLink className="w-4 h-4" /> Visit Deployment
               </a>
               <a
                 href={featured.github}
@@ -212,7 +212,7 @@ export function Projects() {
                   rel="noreferrer"
                   className="inline-flex items-center gap-1.5 bg-gradient-primary text-primary-foreground px-4 py-2 rounded-lg text-sm font-medium hover:shadow-glow transition-all"
                 >
-                  <ExternalLink className="w-4 h-4" /> Live Demo
+                  <ExternalLink className="w-4 h-4" /> Visit Deployment
                 </a>
                 <a
                   href={p.github}

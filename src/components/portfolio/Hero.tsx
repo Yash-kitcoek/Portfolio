@@ -3,7 +3,7 @@ import { Github, Linkedin, Code2, ArrowRight, Download, Mail } from "lucide-reac
 import { useEffect, useState } from "react";
 import avatar from "@/assets/avatar.jpg";
 
-const titles = ["AIML Student", "Full Stack Developer", "Software Engineer", "MERN Developer"];
+const titles = ["AIML Engineer", "Full Stack Developer", "MERN Developer", "Problem Solver"];
 
 export function Hero() {
   const [idx, setIdx] = useState(0);
@@ -44,7 +44,7 @@ export function Hero() {
         >
           <div className="inline-flex items-center gap-2 glass rounded-full px-4 py-1.5 text-xs mb-6">
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-            Available for opportunities
+            Open to opportunities
           </div>
           <h1 className="font-display text-5xl md:text-7xl font-bold leading-[1.05] mb-4">
             Hi, I'm <span className="text-gradient">Yash Gaikwad</span>
@@ -54,7 +54,7 @@ export function Hero() {
             <span className="inline-block w-1 h-7 bg-primary ml-1 animate-pulse align-middle" />
           </div>
           <p className="text-muted-foreground text-lg max-w-xl mb-8 leading-relaxed">
-            Passionate about building modern web applications, solving real-world problems, and continuously learning new technologies.
+            B.Tech AIML student building full-stack web applications and exploring machine learning — turning ideas into shipped products.
           </p>
           <div className="flex flex-wrap gap-3 mb-8">
             <a href="#projects" className="inline-flex items-center gap-2 bg-gradient-primary text-primary-foreground px-6 py-3 rounded-xl font-medium hover:shadow-glow transition-all hover:-translate-y-0.5">
@@ -69,7 +69,7 @@ export function Hero() {
           </div>
           <div className="flex gap-3">
             {[
-              { icon: Github, href: "https://github.com" },
+              { icon: Github, href: "https://github.com/Yash-kitcoek" },
               { icon: Linkedin, href: "https://linkedin.com" },
               { icon: Code2, href: "https://leetcode.com" },
             ].map((s, i) => (

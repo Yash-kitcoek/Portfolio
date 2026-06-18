@@ -1,18 +1,19 @@
 import { motion } from "framer-motion";
 import { Section } from "./Section";
-import { Code2, Globe, Database, Wrench, Sparkles } from "lucide-react";
+import { Code2, Globe, Database, Wrench, Sparkles, Cpu } from "lucide-react";
 
 const groups = [
-  { icon: Code2, title: "Programming Languages", items: ["C", "C++", "Java", "Python", "JavaScript"] },
-  { icon: Globe, title: "Web Development", items: ["HTML", "CSS", "React.js", "Node.js", "Express.js", "REST APIs", "MERN Stack"] },
+  { icon: Code2, title: "Programming Languages", items: ["Python", "JavaScript", "C++", "Java", "C"] },
+  { icon: Globe, title: "Web Development", items: ["React.js", "Node.js", "Express.js", "HTML5", "CSS3", "REST APIs", "MERN Stack"] },
+  { icon: Cpu, title: "AI / ML", items: ["NumPy", "Pandas", "Matplotlib", "Scikit-learn", "ML Fundamentals"] },
   { icon: Database, title: "Databases", items: ["MongoDB", "MySQL"] },
-  { icon: Wrench, title: "Tools & Technologies", items: ["Git", "GitHub", "VS Code", "Postman", "Figma"] },
-  { icon: Sparkles, title: "Areas of Interest", items: ["Full Stack Development", "Software Engineering", "AI / ML", "DSA", "Competitive Programming"] },
+  { icon: Wrench, title: "Tools & DevOps", items: ["Git", "GitHub", "VS Code", "Postman", "Figma", "Vercel", "Render"] },
+  { icon: Sparkles, title: "Core CS", items: ["DSA", "OOP", "OS Basics", "DBMS", "Computer Networks"] },
 ];
 
 export function Skills() {
   return (
-    <Section id="skills" eyebrow="Skills" title="Tech Stack & Toolkit" subtitle="Tools and technologies I love working with.">
+    <Section id="skills" eyebrow="Skills" title="Tech Stack & Toolkit" subtitle="Technologies I build with and concepts I'm deepening.">
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
         {groups.map((g, i) => (
           <motion.div

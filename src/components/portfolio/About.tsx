@@ -3,15 +3,15 @@ import { Section } from "./Section";
 import { Code, Brain, Layers, Trophy } from "lucide-react";
 
 const stats = [
-  { icon: Code, label: "Full Stack Projects", value: "2+" },
+  { icon: Code, label: "Full-Stack Projects Shipped", value: "3+" },
   { icon: Brain, label: "AIML Specialization", value: "B.Tech" },
-  { icon: Layers, label: "Stack Focus", value: "MERN" },
-  { icon: Trophy, label: "Always", value: "Learning" },
+  { icon: Layers, label: "Primary Stack", value: "MERN" },
+  { icon: Trophy, label: "Certifications", value: "2" },
 ];
 
 export function About() {
   return (
-    <Section id="about" eyebrow="About Me" title="The story behind the code" subtitle="Get to know the developer, learner, and problem-solver.">
+    <Section id="about" eyebrow="About Me" title="The story behind the code" subtitle="Developer. Learner. Builder.">
       <div className="grid lg:grid-cols-5 gap-8 items-start">
         <motion.div
           initial={{ opacity: 0, x: -30 }}
@@ -21,13 +21,13 @@ export function About() {
           className="lg:col-span-3 glass rounded-3xl p-8 md:p-10"
         >
           <p className="text-foreground/90 leading-relaxed mb-4">
-            My name is <span className="text-gradient font-semibold">Yash Gaikwad</span>, a second-year B.Tech Computer Science Engineering student specializing in Artificial Intelligence and Machine Learning (AIML). I am highly interested in technology — especially Web Development and Software Development — and enjoy building projects that sharpen my practical skills and problem-solving abilities.
+            I'm <span className="text-gradient font-semibold">Yash Gaikwad</span>, a second-year B.Tech Computer Science student specialising in <span className="text-foreground font-medium">Artificial Intelligence & Machine Learning</span> at KITCOEK, Kolhapur. I build full-stack web apps with the MERN stack and am actively exploring how ML can be woven into real products.
           </p>
           <p className="text-muted-foreground leading-relaxed mb-4">
-            I am passionate about learning new technologies and continuously exploring different areas of tech including programming, AI/ML, and full-stack development. My goal is to become a skilled <span className="text-foreground">Software Engineer</span> capable of building impactful and innovative solutions.
+            My projects span property rental platforms, campus utility tools, and agency UIs — each one pushing me to write cleaner code, make smarter architecture decisions, and ship something that actually works end-to-end. I enjoy the intersection where <span className="text-foreground">software engineering meets intelligent systems</span>.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            I strongly believe in continuous learning, self-improvement, and gaining real-world development experience through projects and hands-on practice.
+            When I'm not building, I'm sharpening my DSA skills, grinding through ML fundamentals, or contributing to open source. I'm currently looking for internship opportunities where I can make a real impact.
           </p>
         </motion.div>
 
