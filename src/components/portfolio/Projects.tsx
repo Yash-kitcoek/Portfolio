@@ -17,7 +17,7 @@ const featured = {
     "Cross-browser compatible",
   ],
   icon: Zap,
-  demo: "https://yash-kitcoek.github.io/DigitalHeroes-Task/",
+  demo: "https://digital-heroes-task-one.vercel.app/",
   github: "https://github.com/Yash-kitcoek/DigitalHeroes-Task",
 };
 
@@ -37,7 +37,7 @@ const projects = [
       "Deployed on Vercel",
     ],
     icon: MapPin,
-    demo: "https://go-trip-gamma.vercel.app/listings",
+    demo: "https://portfolio-amber-three-uesf0vd1to.vercel.app/",
     github: "https://github.com/Yash-kitcoek/GoTrip",
   },
   {
