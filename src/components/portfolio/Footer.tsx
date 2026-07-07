@@ -11,7 +11,7 @@ export function Footer() {
           <p className="text-sm text-muted-foreground mt-2">Crafting the web, one commit at a time.</p>
         </div>
         <div className="flex flex-wrap gap-4 justify-center text-sm">
-          {["About", "Skills", "Projects", "Contact"].map((l) => (
+          {["About", "Skills", "Projects", "Resume", "Contact"].map((l) => (
             <a key={l} href={`#${l.toLowerCase()}`} className="text-muted-foreground hover:text-foreground transition-colors">{l}</a>
           ))}
         </div>

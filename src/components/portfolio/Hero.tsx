@@ -29,14 +29,14 @@ export function Hero() {
   }, [text, deleting, idx]);
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center pt-32 pb-16 overflow-hidden">
+    <section id="home" className="relative min-h-screen flex items-center pt-28 sm:pt-32 pb-16 overflow-hidden">
       {/* Floating orbs */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
-        <div className="absolute top-1/4 -left-20 w-96 h-96 rounded-full bg-primary/20 blur-3xl animate-glow-pulse" />
-        <div className="absolute bottom-1/4 -right-20 w-96 h-96 rounded-full bg-accent/20 blur-3xl animate-glow-pulse" style={{ animationDelay: "2s" }} />
+        <div className="absolute top-1/4 -left-20 w-72 sm:w-96 h-72 sm:h-96 rounded-full bg-primary/20 blur-3xl animate-glow-pulse" />
+        <div className="absolute bottom-1/4 -right-20 w-72 sm:w-96 h-72 sm:h-96 rounded-full bg-accent/20 blur-3xl animate-glow-pulse" style={{ animationDelay: "2s" }} />
       </div>
 
-      <div className="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+      <div className="container mx-auto px-5 sm:px-6 grid md:grid-cols-2 gap-10 md:gap-12 items-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -46,14 +46,14 @@ export function Hero() {
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
             Open to opportunities
           </div>
-          <h1 className="font-display text-5xl md:text-7xl font-bold leading-[1.05] mb-4">
+          <h1 className="font-display text-4xl sm:text-5xl md:text-7xl font-bold leading-[1.1] sm:leading-[1.05] mb-4">
             Hi, I'm <span className="text-gradient">Yash Gaikwad</span>
           </h1>
-          <div className="text-2xl md:text-3xl font-display text-muted-foreground mb-6 h-10">
+          <div className="text-xl sm:text-2xl md:text-3xl font-display text-muted-foreground mb-6 h-9 sm:h-10">
             <span className="text-foreground">{text}</span>
-            <span className="inline-block w-1 h-7 bg-primary ml-1 animate-pulse align-middle" />
+            <span className="inline-block w-1 h-6 sm:h-7 bg-primary ml-1 animate-pulse align-middle" />
           </div>
-          <p className="text-muted-foreground text-lg max-w-xl mb-8 leading-relaxed">
+          <p className="text-muted-foreground text-base sm:text-lg max-w-xl mb-8 leading-relaxed">
             B.Tech AIML student building full-stack web applications and exploring machine learning — turning ideas into shipped products.
           </p>
           <div className="flex flex-wrap gap-3 mb-8">
@@ -63,7 +63,11 @@ export function Hero() {
             <a href="#contact" className="inline-flex items-center gap-2 glass px-6 py-3 rounded-xl font-medium hover:bg-white/10 transition-colors">
               <Mail className="w-4 h-4" /> Contact Me
             </a>
-            <a href="#" className="inline-flex items-center gap-2 glass px-6 py-3 rounded-xl font-medium hover:bg-white/10 transition-colors">
+            <a
+              href="/Yash_Gaikwad_Resume.pdf"
+              download="Yash_Gaikwad_Resume.pdf"
+              className="inline-flex items-center gap-2 glass px-6 py-3 rounded-xl font-medium hover:bg-white/10 transition-colors"
+            >
               <Download className="w-4 h-4" /> Resume
             </a>
           </div>
