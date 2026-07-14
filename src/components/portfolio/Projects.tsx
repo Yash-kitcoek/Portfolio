@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Section } from "./Section";
-import { ExternalLink, Github, MapPin, Search } from "lucide-react";
+import { ExternalLink, Github, MapPin, Search, Brain, Video } from "lucide-react";
 
 const projects = [
   {
@@ -38,6 +38,40 @@ const projects = [
     icon: Search,
     demo: "https://findmate.onrender.com/",
     github: "https://github.com/Yash-kitcoek/FindMate",
+  },
+  {
+    title: "KnowledgeOS",
+    tag: "AI-Powered Multi-Source Knowledge Assistant",
+    description:
+      "A modular Retrieval-Augmented Generation system that turns videos, audio, and documents into a searchable knowledge base. Handles the full pipeline from speech-to-text transcription to embedding generation and semantic retrieval, then feeds context-aware prompts to a local open-source LLM for citation-backed answers.",
+    tech: ["Python", "FastAPI", "Whisper", "Sentence Transformers", "FAISS / ChromaDB", "Ollama (Llama 3)"],
+    features: [
+      "Video-to-transcript pipeline (MP3 → JSON)",
+      "Whisper-based speech-to-text",
+      "Chunking & embedding generation",
+      "Vector similarity search",
+      "Context-aware prompt construction",
+      "Local LLM inference via Ollama",
+    ],
+    icon: Brain,
+    github: "https://github.com/Yash-kitcoek/KnowledgeOS-AI-Powered-Multi-Source-Knowledge-Assistant",
+  },
+  {
+    title: "VidSnapAI",
+    tag: "AI-Powered TikTok Reel Generator",
+    description:
+      "A Flask-based application that turns image uploads into vertical social-media reels, generating an AI voiceover with ElevenLabs and rendering the final video with FFmpeg. Includes a background worker for asynchronous rendering, job-status tracking, and a Dockerized deployment with CI test coverage.",
+    tech: ["Flask", "Python", "FFmpeg", "ElevenLabs API", "SQLite", "Docker", "GitHub Actions"],
+    features: [
+      "Image-to-reel voiceover generation",
+      "FFmpeg vertical video rendering",
+      "Background worker for async jobs",
+      "SQLite job status tracking",
+      "Dockerized web + worker deployment",
+      "CI pipeline with route tests",
+    ],
+    icon: Video,
+    github: "https://github.com/Yash-kitcoek/-VidSnapAI---An-AI-Powered-TikTok-Reel-Generator",
   },
 ];
 
@@ -101,14 +135,16 @@ export function Projects() {
               </div>
 
               <div className="flex flex-wrap gap-2 mt-auto pt-1">
-                <a
-                  href={p.demo}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-1.5 bg-gradient-primary text-primary-foreground px-4 py-2 rounded-lg text-sm font-medium hover:shadow-glow transition-all"
-                >
-                  <ExternalLink className="w-4 h-4" /> Visit Deployment
-                </a>
+                {p.demo && (
+                  <a
+                    href={p.demo}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-1.5 bg-gradient-primary text-primary-foreground px-4 py-2 rounded-lg text-sm font-medium hover:shadow-glow transition-all"
+                  >
+                    <ExternalLink className="w-4 h-4" /> Visit Deployment
+                  </a>
+                )}
                 <a
                   href={p.github}
                   target="_blank"
