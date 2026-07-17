@@ -5,10 +5,10 @@ import { Code2, Globe, Database, Wrench, Sparkles, Cpu } from "lucide-react";
 const groups = [
   { icon: Code2, title: "Languages", items: ["JavaScript", "TypeScript", "Python", "C++", "C", "SQL"] },
   { icon: Sparkles, title: "Frontend", items: ["React", "Next.js", "Vite", "EJS", "Tailwind CSS", "Bootstrap 5", "HTML5", "CSS3"] },
-  { icon: Globe, title: "Backend", items: ["Node.js", "Express.js", "Flask", "FastAPI", "REST API Design", "MVC Architecture"] },
-  { icon: Database, title: "Databases", items: ["MongoDB (Atlas)", "Mongoose", "Supabase (Postgres)", "SQLite"] },
-  { icon: Wrench, title: "Auth / Cloud / DevOps", items: ["Passport.js", "Cloudinary", "Docker", "Git", "GitHub Actions (CI)", "Vercel", "Render", "Vitest", "ESLint", "Resend"] },
-  { icon: Cpu, title: "Applied AI/ML", items: ["Whisper (Speech-to-Text)", "Ollama (LLM & Embeddings)", "Anthropic API", "RAG", "FFmpeg", "Tesseract OCR"] },
+  { icon: Globe, title: "Backend", items: ["Node.js", "Express.js", "Flask", "REST API Design", "MVC Architecture"] },
+  { icon: Database, title: "Databases", items: ["MongoDB (Atlas)", "Mongoose", "SQLite"] },
+  { icon: Wrench, title: "Auth / Cloud / DevOps", items: ["Passport.js", "Cloudinary", "Docker", "Git", "GitHub Actions (CI)", "Vercel", "Render"] },
+  { icon: Cpu, title: "Applied AI/ML", items: ["FFmpeg", "ElevenLabs API (TTS)"] },
 ];
 
 export function Skills() {

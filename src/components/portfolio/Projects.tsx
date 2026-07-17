@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Section } from "./Section";
-import { ExternalLink, Github, MapPin, Search, BrainCircuit, Clapperboard, Receipt } from "lucide-react";
+import { ExternalLink, Github, MapPin, Search, Clapperboard } from "lucide-react";
 
 const GITHUB_PROFILE = "https://github.com/Yash-kitcoek";
 
@@ -44,25 +44,6 @@ const projects = [
     github: "https://github.com/Yash-kitcoek/FindMate",
   },
   {
-    title: "KnowledgeOS",
-    tag: "AI-Powered Multi-Source Knowledge Assistant",
-    status: "Solo Project — In Progress",
-    description:
-      "A FastAPI ingestion service that turns documents, images, and audio/video into a searchable knowledge base, with a retrieval-augmented answering loop over transcript chunks.",
-    tech: ["Python", "FastAPI", "Whisper", "Tesseract OCR", "Ollama (Llama 3)"],
-    features: [
-      "14 supported source file types",
-      "OCR + Whisper transcription",
-      "RAG loop via Ollama embeddings",
-      "Cosine-similarity chunk retrieval",
-      "Citations with timestamps",
-      "Staged architecture roadmap",
-    ],
-    icon: BrainCircuit,
-    demo: null,
-    github: GITHUB_PROFILE,
-  },
-  {
     title: "VidSnapAI",
     tag: "AI-Powered TikTok Reel Generator",
     status: "Solo Project",
@@ -80,25 +61,6 @@ const projects = [
     icon: Clapperboard,
     demo: null,
     github: GITHUB_PROFILE,
-  },
-  {
-    title: "AI Spend Audit",
-    tag: "SaaS Lead-Gen Tool — AI Tool Cost Auditor",
-    status: "Solo Project — 7-Day Build",
-    description:
-      "A free, no-login web app that audits a user's AI tool subscriptions in 60 seconds and quantifies overspend with a deterministic (non-AI) rule engine, built as a lead-generation asset for a startup.",
-    tech: ["Next.js 14 (App Router)", "TypeScript", "Tailwind CSS", "Supabase", "Resend", "Vitest", "Vercel"],
-    features: [
-      "Deterministic TS audit engine (no LLM math)",
-      "Claude-generated personalised summary",
-      "Post-value email capture via Supabase + Resend",
-      "Honeypot + IP rate limiting on API routes",
-      "Shareable audit URLs with PII stripped",
-      "GitHub Actions CI + Vitest test suite",
-    ],
-    icon: Receipt,
-    demo: "https://ai-cost-auditor-v2.vercel.app",
-    github: "https://github.com/Yash-kitcoek/ai-cost-auditor-v2",
   },
 ];
 
