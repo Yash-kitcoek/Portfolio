@@ -2,8 +2,6 @@ import { motion } from "framer-motion";
 import { Section } from "./Section";
 import { ExternalLink, Github, MapPin, Search, BrainCircuit, Clapperboard } from "lucide-react";
 
-const GITHUB_PROFILE = "https://github.com/Yash-kitcoek";
-
 const projects = [
   {
     title: "GoTrip",
@@ -41,7 +39,7 @@ const projects = [
     ],
     icon: Search,
     demo: "https://findmate.onrender.com/",
-    github: "https://github.com/Yash-kitcoek/FindMate",
+    github: "https://github.com/Yash-kitcoek/FindMate---Lost-and-Found-Platform",
   },
   {
     title: "KnowledgeOS",
@@ -60,7 +58,7 @@ const projects = [
     ],
     icon: BrainCircuit,
     demo: null,
-    github: GITHUB_PROFILE,
+    github: "https://github.com/Yash-kitcoek/KnowledgeOS-AI-Powered-Multi-Source-Knowledge-Assistant",
   },
   {
     title: "VidSnapAI",
@@ -79,7 +77,7 @@ const projects = [
     ],
     icon: Clapperboard,
     demo: null,
-    github: GITHUB_PROFILE,
+    github: "https://github.com/Yash-kitcoek/-VidSnapAI---An-AI-Powered-TikTok-Reel-Generator",
   },
 ];
 
