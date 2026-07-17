@@ -18,8 +18,8 @@ export function Footer() {
         <div className="flex gap-2 justify-center md:justify-end">
           {[
             { icon: Github, href: "https://github.com/Yash-kitcoek" },
-            { icon: Linkedin, href: "https://linkedin.com" },
-            { icon: Code2, href: "https://leetcode.com" },
+            { icon: Linkedin, href: "https://www.linkedin.com/in/yash-gaikwad-76412231a/" },
+            { icon: Code2, href: "https://leetcode.com/u/Yash__12345/" },
           ].map((s, i) => (
             <a key={i} href={s.href} target="_blank" rel="noreferrer" className="w-10 h-10 grid place-items-center rounded-xl bg-white/5 border border-white/10 hover:bg-gradient-primary hover:border-transparent transition-all">
               <s.icon className="w-4 h-4" />
