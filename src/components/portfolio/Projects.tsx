@@ -1,39 +1,43 @@
 import { motion } from "framer-motion";
 import { Section } from "./Section";
-import { ExternalLink, Github, MapPin, Search, Brain, Video } from "lucide-react";
+import { ExternalLink, Github, MapPin, Search, BrainCircuit, Clapperboard } from "lucide-react";
+
+const GITHUB_PROFILE = "https://github.com/Yash-kitcoek";
 
 const projects = [
   {
     title: "GoTrip",
     tag: "Full-Stack Property Rental Platform",
+    status: "Solo Project",
     description:
-      "A full-stack property rental platform where users can list, browse, and book properties. Built with the MERN stack featuring complete CRUD operations, session-based authentication via Passport.js, cloud image uploads through Cloudinary, and interactive map-based listings powered by Mapbox.",
-    tech: ["MongoDB", "Express.js", "Node.js", "JavaScript", "Mongoose", "Cloudinary", "Mapbox", "CSS"],
+      "A full-stack rental platform spanning 5 database models and 20 REST endpoints — listings, reviews, bookings, and wishlists across 10 listing categories — with complete CRUD workflows.",
+    tech: ["Node.js", "Express.js", "MongoDB Atlas", "EJS", "Bootstrap 5", "Passport.js", "Cloudinary"],
     features: [
-      "Session-based auth (Passport.js)",
-      "Full CRUD for listings",
-      "Cloudinary image uploads",
-      "Mapbox location display",
-      "Review & rating system",
-      "Deployed on Render",
+      "5 models, 20 REST endpoints",
+      "Passport.js auth + persistent sessions",
+      "Dual-layer validation (Joi + Mongoose)",
+      "Cloudinary multi-image upload",
+      "Deployed on Vercel (serverless)",
+      "MongoDB Atlas in production",
     ],
     icon: MapPin,
-    demo: "https://go-trip-gamma.vercel.app/listings",
+    demo: "https://portfolio-amber-three-uesf0vd1to.vercel.app/",
     github: "https://github.com/Yash-kitcoek/GoTrip",
   },
   {
     title: "FindMate",
     tag: "AI-Powered Campus Lost & Found Platform",
+    status: "College Team Project",
     description:
-      "A role-based web portal enabling students to report lost items and search for found ones across campus. Built on the MVC pattern with Node.js and MongoDB, featuring an AI matching engine, separate admin and student dashboards, image upload support, and keyword-based search and filtering.",
-    tech: ["MongoDB", "Express.js", "Node.js", "Flask", "TF-IDF", "Bootstrap", "Mongoose"],
+      "A role-based portal for reporting and recovering lost campus items. Led the frontend — 25 EJS templates (~4,400 lines) — and integrated a Flask AI matching microservice built by the team.",
+    tech: ["Node.js", "Express.js", "EJS", "Tailwind CSS", "Passport.js", "Cloudinary", "Flask"],
     features: [
-      "Role-based auth (Admin / Student)",
-      "AI matching engine (TF-IDF)",
-      "Admin review dashboard",
-      "Keyword search & filter",
-      "Image upload support",
-      "Responsive Bootstrap UI",
+      "Primary frontend contributor",
+      "25 EJS templates (~4,400 lines)",
+      "Passport.js auth + Cloudinary uploads",
+      "AI matching: 6 weighted signals",
+      "Admin review flows",
+      "Deployed on Render",
     ],
     icon: Search,
     demo: "https://findmate.onrender.com/",
@@ -42,36 +46,40 @@ const projects = [
   {
     title: "KnowledgeOS",
     tag: "AI-Powered Multi-Source Knowledge Assistant",
+    status: "Solo Project — In Progress",
     description:
-      "A modular Retrieval-Augmented Generation system that turns videos, audio, and documents into a searchable knowledge base. Handles the full pipeline from speech-to-text transcription to embedding generation and semantic retrieval, then feeds context-aware prompts to a local open-source LLM for citation-backed answers.",
-    tech: ["Python", "FastAPI", "Whisper", "Sentence Transformers", "FAISS / ChromaDB", "Ollama (Llama 3)"],
+      "A FastAPI ingestion service that turns documents, images, and audio/video into a searchable knowledge base, with a retrieval-augmented answering loop over transcript chunks.",
+    tech: ["Python", "FastAPI", "Whisper", "Tesseract OCR", "Ollama (Llama 3)"],
     features: [
-      "Video-to-transcript pipeline (MP3 → JSON)",
-      "Whisper-based speech-to-text",
-      "Chunking & embedding generation",
-      "Vector similarity search",
-      "Context-aware prompt construction",
-      "Local LLM inference via Ollama",
+      "14 supported source file types",
+      "OCR + Whisper transcription",
+      "RAG loop via Ollama embeddings",
+      "Cosine-similarity chunk retrieval",
+      "Citations with timestamps",
+      "Staged architecture roadmap",
     ],
-    icon: Brain,
-    github: "https://github.com/Yash-kitcoek/KnowledgeOS-AI-Powered-Multi-Source-Knowledge-Assistant",
+    icon: BrainCircuit,
+    demo: null,
+    github: GITHUB_PROFILE,
   },
   {
     title: "VidSnapAI",
     tag: "AI-Powered TikTok Reel Generator",
+    status: "Solo Project",
     description:
-      "A Flask-based application that turns image uploads into vertical social-media reels, generating an AI voiceover with ElevenLabs and rendering the final video with FFmpeg. Includes a background worker for asynchronous rendering, job-status tracking, and a Dockerized deployment with CI test coverage.",
-    tech: ["Flask", "Python", "FFmpeg", "ElevenLabs API", "SQLite", "Docker", "GitHub Actions"],
+      "A Flask app that converts uploaded images into 1080×1920 vertical video reels, with AI voiceover generation and an async background rendering worker.",
+    tech: ["Flask", "Python", "FFmpeg", "ElevenLabs API", "SQLite", "Docker"],
     features: [
-      "Image-to-reel voiceover generation",
-      "FFmpeg vertical video rendering",
-      "Background worker for async jobs",
-      "SQLite job status tracking",
-      "Dockerized web + worker deployment",
-      "CI pipeline with route tests",
+      "25MB uploads, 4 image formats",
+      "1080×1920 FFmpeg video output",
+      "ElevenLabs AI voiceover (TTS)",
+      "Async polling render worker",
+      "Dockerized (docker-compose)",
+      "GitHub Actions CI on every push",
     ],
-    icon: Video,
-    github: "https://github.com/Yash-kitcoek/-VidSnapAI---An-AI-Powered-TikTok-Reel-Generator",
+    icon: Clapperboard,
+    demo: null,
+    github: GITHUB_PROFILE,
   },
 ];
 
@@ -79,6 +87,7 @@ export function Projects() {
   return (
     <Section
       id="projects"
+      index="05"
       eyebrow="Projects"
       title="Featured Work"
       subtitle="Things I've designed, built, and shipped."
@@ -90,19 +99,24 @@ export function Projects() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: i * 0.12 }}
+            transition={{ duration: 0.6, delay: i * 0.1 }}
             className="group relative glass rounded-3xl p-6 sm:p-8 overflow-hidden hover:-translate-y-1.5 transition-all duration-500 flex flex-col"
           >
             <div className="absolute -top-20 -right-20 w-60 h-60 bg-gradient-primary rounded-full blur-3xl opacity-0 group-hover:opacity-25 transition-opacity duration-500 pointer-events-none" />
 
             <div className="relative flex flex-col flex-1">
-              <div className="flex items-start justify-between mb-5">
+              <div className="flex items-start justify-between mb-5 gap-2">
                 <div className="w-13 h-13 sm:w-14 sm:h-14 rounded-2xl bg-gradient-primary grid place-items-center shadow-glow shrink-0">
                   <p.icon className="w-6 h-6 text-primary-foreground" />
                 </div>
-                <span className="text-xs font-mono text-primary uppercase tracking-wider pt-1">
-                  0{i + 1}
-                </span>
+                <div className="flex flex-col items-end gap-1.5">
+                  <span className="text-xs font-mono text-primary uppercase tracking-wider">
+                    FIG. 0{i + 1}
+                  </span>
+                  <span className="text-[10px] font-mono uppercase tracking-wider px-2 py-0.5 rounded-full bg-accent/10 text-accent border border-accent/20 whitespace-nowrap">
+                    {p.status}
+                  </span>
+                </div>
               </div>
 
               <h3 className="font-display text-xl sm:text-2xl font-bold mb-1">{p.title}</h3>
@@ -151,7 +165,7 @@ export function Projects() {
                   rel="noreferrer"
                   className="inline-flex items-center gap-1.5 glass px-4 py-2 rounded-lg text-sm font-medium hover:bg-white/10 transition-colors"
                 >
-                  <Github className="w-4 h-4" /> GitHub
+                  <Github className="w-4 h-4" /> {p.demo ? "GitHub" : "View on GitHub"}
                 </a>
               </div>
             </div>

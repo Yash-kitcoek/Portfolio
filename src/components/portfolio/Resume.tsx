@@ -8,6 +8,7 @@ export function Resume() {
   return (
     <Section
       id="resume"
+      index="06"
       eyebrow="Resume"
       title="Download My Resume"
       subtitle="Get a complete overview of my skills, projects, and education in one PDF."

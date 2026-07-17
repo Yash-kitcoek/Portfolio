@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Section } from "./Section";
-import { Mail, MapPin, Github, Linkedin, Code2, Send } from "lucide-react";
+import { Mail, MapPin, Github, Linkedin, Code2, Send, Copy, Check } from "lucide-react";
 import { useState, FormEvent } from "react";
 import { toast } from "sonner";
 import { z } from "zod";
@@ -18,6 +18,18 @@ const schema = z.object({
 
 export function Contact() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [copied, setCopied] = useState(false);
+
+  const copyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText("yashgaikwad5516@gmail.com");
+      setCopied(true);
+      toast.success("Email copied to clipboard");
+      setTimeout(() => setCopied(false), 2000);
+    } catch {
+      toast.error("Couldn't copy — email it directly instead.");
+    }
+  };
 
   const [loading, setLoading] = useState(false);
 
@@ -51,7 +63,7 @@ export function Contact() {
   };
 
   return (
-    <Section id="contact" eyebrow="Contact" title="Let's Build Together" subtitle="Have an opportunity, project, or just want to say hi? Drop a message.">
+    <Section id="contact" index="08" eyebrow="Contact" title="Let's Build Together" subtitle="Have an opportunity, project, or just want to say hi? Drop a message.">
       <div className="grid lg:grid-cols-5 gap-8 max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, x: -20 }}
@@ -59,25 +71,40 @@ export function Contact() {
           viewport={{ once: true }}
           className="lg:col-span-2 space-y-4"
         >
-          {[
-            { icon: Mail, label: "Email", value: "yashgaikwad5516@gmail.com", href: "mailto:yashgaikwad5516@gmail.com" },
-            { icon: MapPin, label: "Location", value: "Kolhapur, India" },
-          ].map((item) => (
-            <a key={item.label} href={item.href} className="glass rounded-2xl p-5 flex gap-4 items-center hover:shadow-glow transition-all">
-              <div className="w-11 h-11 rounded-xl bg-gradient-primary grid place-items-center shrink-0">
-                <item.icon className="w-5 h-5 text-primary-foreground" />
-              </div>
-              <div className="min-w-0">
-                <div className="text-xs text-muted-foreground uppercase tracking-wider">{item.label}</div>
-                <div className="text-sm font-medium truncate">{item.value}</div>
-              </div>
-            </a>
-          ))}
+          <a href="mailto:yashgaikwad5516@gmail.com" className="glass rounded-2xl p-5 flex gap-4 items-center hover:shadow-glow transition-all group">
+            <div className="w-11 h-11 rounded-xl bg-gradient-primary grid place-items-center shrink-0">
+              <Mail className="w-5 h-5 text-primary-foreground" />
+            </div>
+            <div className="min-w-0 flex-1">
+              <div className="text-xs text-muted-foreground uppercase tracking-wider">Email</div>
+              <div className="text-sm font-medium truncate">yashgaikwad5516@gmail.com</div>
+            </div>
+            <button
+              type="button"
+              onClick={(e) => {
+                e.preventDefault();
+                copyEmail();
+              }}
+              aria-label="Copy email address"
+              className="shrink-0 w-9 h-9 grid place-items-center rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 transition-colors sm:opacity-0 sm:group-hover:opacity-100 sm:focus:opacity-100"
+            >
+              {copied ? <Check className="w-4 h-4 text-emerald-400" /> : <Copy className="w-4 h-4" />}
+            </button>
+          </a>
+          <div className="glass rounded-2xl p-5 flex gap-4 items-center">
+            <div className="w-11 h-11 rounded-xl bg-gradient-primary grid place-items-center shrink-0">
+              <MapPin className="w-5 h-5 text-primary-foreground" />
+            </div>
+            <div className="min-w-0">
+              <div className="text-xs text-muted-foreground uppercase tracking-wider">Location</div>
+              <div className="text-sm font-medium truncate">Kolhapur, India</div>
+            </div>
+          </div>
           <div className="glass rounded-2xl p-5">
             <div className="text-xs text-muted-foreground uppercase tracking-wider mb-3">Find me on</div>
             <div className="flex gap-2">
               {[
-                { icon: Github, href: "https://github.com" },
+                { icon: Github, href: "https://github.com/Yash-kitcoek" },
                 { icon: Linkedin, href: "https://linkedin.com" },
                 { icon: Code2, href: "https://leetcode.com" },
               ].map((s, i) => (
@@ -86,6 +113,7 @@ export function Contact() {
                 </a>
               ))}
             </div>
+
           </div>
         </motion.div>
 

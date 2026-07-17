@@ -4,7 +4,7 @@ import { GraduationCap, Calendar, MapPin } from "lucide-react";
 
 export function Education() {
   return (
-    <Section id="education" eyebrow="Education" title="Academic Journey">
+    <Section id="education" index="03" eyebrow="Education" title="Academic Journey">
       <div className="max-w-3xl mx-auto relative">
         <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-primary via-accent to-transparent" />
         {[1].map((_, i) => (

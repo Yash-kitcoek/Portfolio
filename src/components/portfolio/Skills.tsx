@@ -3,17 +3,17 @@ import { Section } from "./Section";
 import { Code2, Globe, Database, Wrench, Sparkles, Cpu } from "lucide-react";
 
 const groups = [
-  { icon: Code2, title: "Programming Languages", items: ["Python", "JavaScript", "C++", "Java", "C"] },
-  { icon: Globe, title: "Web Development", items: ["React.js", "Node.js", "Express.js", "HTML5", "CSS3", "REST APIs", "MERN Stack"] },
-  { icon: Cpu, title: "AI / ML", items: ["NumPy", "Pandas", "Matplotlib", "Scikit-learn", "ML Fundamentals"] },
-  { icon: Database, title: "Databases", items: ["MongoDB", "MySQL"] },
-  { icon: Wrench, title: "Tools & DevOps", items: ["Git", "GitHub", "VS Code", "Postman", "Figma", "Vercel", "Render"] },
-  { icon: Sparkles, title: "Core CS", items: ["DSA", "OOP", "OS Basics", "DBMS", "Computer Networks"] },
+  { icon: Code2, title: "Languages", items: ["JavaScript", "Python", "SQL"] },
+  { icon: Globe, title: "Backend", items: ["Node.js", "Express.js", "Flask", "FastAPI", "REST API Design", "MVC Architecture"] },
+  { icon: Sparkles, title: "Frontend", items: ["EJS", "Tailwind CSS", "Bootstrap 5", "HTML5", "CSS3"] },
+  { icon: Database, title: "Databases", items: ["MongoDB (Atlas)", "Mongoose", "SQLite"] },
+  { icon: Wrench, title: "Auth / Cloud / DevOps", items: ["Passport.js", "Cloudinary", "Docker", "Git", "GitHub Actions (CI)", "Vercel", "Render"] },
+  { icon: Cpu, title: "Applied AI/ML", items: ["Whisper (Speech-to-Text)", "Ollama (LLM & Embeddings)", "RAG", "FFmpeg", "Tesseract OCR"] },
 ];
 
 export function Skills() {
   return (
-    <Section id="skills" eyebrow="Skills" title="Tech Stack & Toolkit" subtitle="Technologies I build with and concepts I'm deepening.">
+    <Section id="skills" index="04" eyebrow="Skills" title="Tech Stack & Toolkit" subtitle="Technologies I build with and concepts I'm deepening.">
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
         {groups.map((g, i) => (
           <motion.div
@@ -25,7 +25,7 @@ export function Skills() {
             className="glass rounded-2xl p-6 hover:shadow-glow transition-all group"
           >
             <div className="flex items-center gap-3 mb-5">
-              <div className="w-11 h-11 rounded-xl bg-gradient-primary grid place-items-center group-hover:scale-110 transition-transform">
+              <div className="w-11 h-11 rounded-xl bg-gradient-primary grid place-items-center group-hover:scale-110 transition-transform shrink-0">
                 <g.icon className="w-5 h-5 text-primary-foreground" />
               </div>
               <h3 className="font-display font-semibold text-lg">{g.title}</h3>
@@ -40,6 +40,23 @@ export function Skills() {
           </motion.div>
         ))}
       </div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: 0.4 }}
+        className="mt-5 glass rounded-2xl p-5 flex flex-wrap items-center gap-3"
+      >
+        <span className="text-xs uppercase tracking-wider text-muted-foreground shrink-0">
+          Also familiar with (coursework):
+        </span>
+        {["C", "C++", "Java", "DSA", "OOP"].map((it) => (
+          <span key={it} className="text-xs px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-muted-foreground font-mono">
+            {it}
+          </span>
+        ))}
+      </motion.div>
     </Section>
   );
 }

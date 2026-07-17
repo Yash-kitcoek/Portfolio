@@ -5,11 +5,10 @@ import { Menu, X } from "lucide-react";
 const links = [
   { href: "#home", label: "Home" },
   { href: "#about", label: "About" },
-  { href: "#education", label: "Education" },
   { href: "#skills", label: "Skills" },
   { href: "#projects", label: "Projects" },
+  { href: "#approach", label: "Approach" },
   { href: "#resume", label: "Resume" },
-  { href: "#certifications", label: "Certifications" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -26,9 +25,13 @@ export function Navbar() {
       />
       <header className="fixed top-3 sm:top-4 left-1/2 -translate-x-1/2 z-50 w-[min(94%,1180px)]">
         <nav className="glass-strong rounded-2xl px-4 sm:px-5 py-3 flex items-center justify-between gap-2">
-          <a href="#home" className="font-display font-bold text-lg shrink-0">
-            <span className="text-gradient">Yash</span>
-            <span className="text-foreground">.dev</span>
+          <a href="#home" className="flex items-center gap-2 shrink-0" aria-label="Back to top">
+            <span className="font-mono text-xs sm:text-sm border border-primary/40 text-primary rounded-md px-2 py-1 tracking-widest bg-primary/5">
+              YG
+            </span>
+            <span className="hidden sm:inline text-xs text-muted-foreground font-mono tracking-wide">
+              // full-stack &amp; ml
+            </span>
           </a>
           <ul className="hidden lg:flex items-center gap-0.5 xl:gap-1">
             {links.map((l) => (

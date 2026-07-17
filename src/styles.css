@@ -55,37 +55,39 @@
   }
 }
 
+/* Blueprint palette: deep engineering-navy base, amber (build/ship) + teal (logic/systems) dual accent */
 :root {
-  --radius: 0.875rem;
-  --background: oklch(0.16 0.02 270);
-  --foreground: oklch(0.97 0.01 250);
-  --card: oklch(0.21 0.025 270);
-  --card-foreground: oklch(0.97 0.01 250);
-  --popover: oklch(0.21 0.025 270);
-  --popover-foreground: oklch(0.97 0.01 250);
-  --primary: oklch(0.72 0.18 195);
-  --primary-foreground: oklch(0.15 0.02 270);
-  --secondary: oklch(0.28 0.04 280);
-  --secondary-foreground: oklch(0.97 0.01 250);
-  --muted: oklch(0.24 0.03 270);
-  --muted-foreground: oklch(0.7 0.03 260);
-  --accent: oklch(0.65 0.24 305);
-  --accent-foreground: oklch(0.97 0.01 250);
-  --destructive: oklch(0.65 0.22 25);
+  --radius: 0.75rem;
+  --background: oklch(0.17 0.032 252);
+  --foreground: oklch(0.96 0.008 250);
+  --card: oklch(0.225 0.038 250);
+  --card-foreground: oklch(0.96 0.008 250);
+  --popover: oklch(0.225 0.038 250);
+  --popover-foreground: oklch(0.96 0.008 250);
+  --primary: oklch(0.79 0.15 75);
+  --primary-foreground: oklch(0.16 0.03 250);
+  --secondary: oklch(0.29 0.04 255);
+  --secondary-foreground: oklch(0.96 0.008 250);
+  --muted: oklch(0.25 0.032 252);
+  --muted-foreground: oklch(0.68 0.025 250);
+  --accent: oklch(0.75 0.11 195);
+  --accent-foreground: oklch(0.15 0.03 250);
+  --destructive: oklch(0.64 0.21 25);
   --destructive-foreground: oklch(0.97 0.01 250);
-  --border: oklch(0.3 0.04 275 / 60%);
-  --input: oklch(0.28 0.04 275);
-  --ring: oklch(0.72 0.18 195);
-  --glow: oklch(0.72 0.18 195);
-  --glow-2: oklch(0.65 0.24 305);
+  --border: oklch(0.34 0.04 252 / 55%);
+  --input: oklch(0.29 0.04 252);
+  --ring: oklch(0.79 0.15 75);
+  --glow: oklch(0.79 0.15 75);
+  --glow-2: oklch(0.75 0.11 195);
 
-  --gradient-primary: linear-gradient(135deg, oklch(0.72 0.18 195), oklch(0.65 0.24 305));
-  --gradient-mesh: radial-gradient(at 20% 20%, oklch(0.72 0.18 195 / 0.18) 0px, transparent 50%),
-                   radial-gradient(at 80% 30%, oklch(0.65 0.24 305 / 0.18) 0px, transparent 50%),
-                   radial-gradient(at 60% 80%, oklch(0.55 0.2 250 / 0.15) 0px, transparent 50%);
-  --shadow-glow: 0 0 60px oklch(0.72 0.18 195 / 0.4);
-  --shadow-glow-accent: 0 0 60px oklch(0.65 0.24 305 / 0.35);
+  --gradient-primary: linear-gradient(135deg, oklch(0.79 0.15 75), oklch(0.75 0.11 195));
+  --gradient-mesh: radial-gradient(at 15% 15%, oklch(0.79 0.15 75 / 0.10) 0px, transparent 45%),
+                   radial-gradient(at 85% 25%, oklch(0.75 0.11 195 / 0.12) 0px, transparent 45%),
+                   radial-gradient(at 50% 90%, oklch(0.5 0.06 250 / 0.15) 0px, transparent 55%);
+  --shadow-glow: 0 0 50px oklch(0.79 0.15 75 / 0.3);
+  --shadow-glow-accent: 0 0 50px oklch(0.75 0.11 195 / 0.3);
   --shadow-elegant: 0 20px 50px -20px oklch(0 0 0 / 0.5);
+  --grid-line: oklch(0.96 0.008 250 / 0.045);
 }
 
 @layer base {
@@ -95,24 +97,29 @@
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-sans);
-    background-image: var(--gradient-mesh);
+    background-image:
+      var(--gradient-mesh),
+      linear-gradient(var(--grid-line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+    background-size: auto, 56px 56px, 56px 56px;
     background-attachment: fixed;
   }
   h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: -0.02em; }
-  ::selection { background: oklch(0.72 0.18 195 / 0.4); }
+  ::selection { background: oklch(0.79 0.15 75 / 0.35); }
   ::-webkit-scrollbar { width: 10px; height: 10px; }
   ::-webkit-scrollbar-track { background: var(--background); }
   ::-webkit-scrollbar-thumb { background: var(--gradient-primary); border-radius: 10px; }
+  :focus-visible { outline: 2px solid var(--color-primary); outline-offset: 2px; }
 }
 
 @layer utilities {
   .glass {
-    background: oklch(0.22 0.03 270 / 0.5);
+    background: oklch(0.24 0.035 250 / 0.5);
     backdrop-filter: blur(20px);
     border: 1px solid oklch(1 0 0 / 0.08);
   }
   .glass-strong {
-    background: oklch(0.22 0.03 270 / 0.75);
+    background: oklch(0.24 0.035 250 / 0.78);
     backdrop-filter: blur(24px);
     border: 1px solid oklch(1 0 0 / 0.1);
   }
@@ -131,5 +138,31 @@
     background: linear-gradient(var(--card), var(--card)) padding-box,
                 var(--gradient-primary) border-box;
     border: 1px solid transparent;
+  }
+
+  /* Blueprint signature: corner-bracket viewport frame */
+  .frame-brackets { position: relative; }
+  .frame-brackets::before,
+  .frame-brackets::after {
+    content: "";
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    border-color: var(--color-primary);
+    pointer-events: none;
+  }
+  .frame-brackets::before {
+    top: -10px;
+    left: -10px;
+    border-top: 2.5px solid var(--color-primary);
+    border-left: 2.5px solid var(--color-primary);
+    border-radius: 4px 0 0 0;
+  }
+  .frame-brackets::after {
+    bottom: -10px;
+    right: -10px;
+    border-bottom: 2.5px solid var(--color-accent);
+    border-right: 2.5px solid var(--color-accent);
+    border-radius: 0 0 4px 0;
   }
 }
