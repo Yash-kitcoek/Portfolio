@@ -2,9 +2,9 @@ import { motion } from "framer-motion";
 import { Boxes, Code2, Rocket, Users } from "lucide-react";
 
 const stats = [
-  { icon: Boxes, value: "4", label: "Projects Shipped" },
-  { icon: Code2, value: "~13K", label: "Lines of Code" },
-  { icon: Rocket, value: "3", label: "Solo Deployments" },
+  { icon: Boxes, value: "5", label: "Projects Shipped" },
+  { icon: Code2, value: "~14K", label: "Lines of Code" },
+  { icon: Rocket, value: "4", label: "Solo Deployments" },
   { icon: Users, value: "1", label: "Team Project Led (Frontend)" },
 ];
 

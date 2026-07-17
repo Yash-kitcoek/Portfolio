@@ -3,12 +3,12 @@ import { Section } from "./Section";
 import { Code2, Globe, Database, Wrench, Sparkles, Cpu } from "lucide-react";
 
 const groups = [
-  { icon: Code2, title: "Languages", items: ["JavaScript", "Python", "SQL"] },
+  { icon: Code2, title: "Languages", items: ["JavaScript", "TypeScript", "Python", "C++", "C", "SQL"] },
+  { icon: Sparkles, title: "Frontend", items: ["React", "Next.js", "Vite", "EJS", "Tailwind CSS", "Bootstrap 5", "HTML5", "CSS3"] },
   { icon: Globe, title: "Backend", items: ["Node.js", "Express.js", "Flask", "FastAPI", "REST API Design", "MVC Architecture"] },
-  { icon: Sparkles, title: "Frontend", items: ["EJS", "Tailwind CSS", "Bootstrap 5", "HTML5", "CSS3"] },
-  { icon: Database, title: "Databases", items: ["MongoDB (Atlas)", "Mongoose", "SQLite"] },
-  { icon: Wrench, title: "Auth / Cloud / DevOps", items: ["Passport.js", "Cloudinary", "Docker", "Git", "GitHub Actions (CI)", "Vercel", "Render"] },
-  { icon: Cpu, title: "Applied AI/ML", items: ["Whisper (Speech-to-Text)", "Ollama (LLM & Embeddings)", "RAG", "FFmpeg", "Tesseract OCR"] },
+  { icon: Database, title: "Databases", items: ["MongoDB (Atlas)", "Mongoose", "Supabase (Postgres)", "SQLite"] },
+  { icon: Wrench, title: "Auth / Cloud / DevOps", items: ["Passport.js", "Cloudinary", "Docker", "Git", "GitHub Actions (CI)", "Vercel", "Render", "Vitest", "ESLint", "Resend"] },
+  { icon: Cpu, title: "Applied AI/ML", items: ["Whisper (Speech-to-Text)", "Ollama (LLM & Embeddings)", "Anthropic API", "RAG", "FFmpeg", "Tesseract OCR"] },
 ];
 
 export function Skills() {
@@ -51,7 +51,7 @@ export function Skills() {
         <span className="text-xs uppercase tracking-wider text-muted-foreground shrink-0">
           Also familiar with (coursework):
         </span>
-        {["C", "C++", "Java", "DSA", "OOP"].map((it) => (
+        {["Java", "Data Structures & Algorithms", "OOP", "DBMS"].map((it) => (
           <span key={it} className="text-xs px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-muted-foreground font-mono">
             {it}
           </span>

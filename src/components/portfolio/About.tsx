@@ -3,9 +3,9 @@ import { Section } from "./Section";
 import { Code, Brain, Layers, Trophy } from "lucide-react";
 
 const stats = [
-  { icon: Code, label: "Projects, Solo-Built & Deployed", value: "3" },
+  { icon: Code, label: "Projects, Solo-Built & Deployed", value: "4" },
   { icon: Brain, label: "AI/ML Specialization", value: "B.Tech" },
-  { icon: Layers, label: "Primary Stack", value: "MERN" },
+  { icon: Layers, label: "Primary Stack", value: "MERN + Next.js" },
   { icon: Trophy, label: "Certifications", value: "3" },
 ];
 
@@ -24,7 +24,7 @@ export function About() {
             I'm <span className="text-gradient font-semibold">Yash Gaikwad</span>, a third-year B.Tech Computer Science student specialising in <span className="text-foreground font-medium">Artificial Intelligence & Machine Learning</span> at KIT College of Engineering, Kolhapur. I design, build, and deploy full-stack and AI-powered systems end-to-end — from database schema through production deployment.
           </p>
           <p className="text-muted-foreground leading-relaxed mb-4">
-            My portfolio spans property rental platforms, AI-assisted campus tooling, multi-source knowledge retrieval, and automated video generation — three built solo with real users on Vercel and Render, one led as the primary frontend contributor on a college team. I'm comfortable across the stack: REST API design, authentication, relational and NoSQL databases, and applied ML including speech-to-text, embeddings, and LLM-based retrieval.
+            My portfolio spans property rental platforms, AI-assisted campus tooling, multi-source knowledge retrieval, automated video generation, and a Next.js/TypeScript SaaS audit tool — four built solo and deployed on Vercel and Render, one led as the primary frontend contributor on a college team. I'm comfortable across the stack: REST API design, authentication, relational and NoSQL databases, and applied ML including speech-to-text, embeddings, and LLM-based retrieval.
           </p>
           <p className="text-muted-foreground leading-relaxed">
             When I'm not shipping, I'm sharpening DSA fundamentals or going deeper on RAG and applied ML. I'm currently looking for a software engineering internship where I can make a real, measurable impact.
