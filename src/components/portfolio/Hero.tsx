@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Github, Linkedin, Code2, ArrowRight, Download, Mail } from "lucide-react";
 import { useEffect, useState } from "react";
-import avatar from "@/assets/avatar.jpg";
+import avatar from "@/assets/avatar.png";
 
 const titles = ["Full-Stack Developer", "AI/ML Engineer", "Systems Builder", "Problem Solver"];
 
