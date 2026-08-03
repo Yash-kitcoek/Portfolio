@@ -19,7 +19,7 @@ const projects = [
       "MongoDB Atlas in production",
     ],
     icon: MapPin,
-    demo: "https://portfolio-amber-three-uesf0vd1to.vercel.app/",
+    demo: "https://go-trip-gamma.vercel.app/listings",
     github: "https://github.com/Yash-kitcoek/GoTrip",
   },
   {
