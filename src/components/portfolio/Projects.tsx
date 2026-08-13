@@ -85,7 +85,7 @@ export function Projects() {
   return (
     <Section
       id="projects"
-      index="05"
+      index="06"
       eyebrow="Projects"
       title="Featured Work"
       subtitle="Things I've designed, built, and shipped."

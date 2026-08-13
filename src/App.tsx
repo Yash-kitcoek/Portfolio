@@ -5,6 +5,7 @@ import { Stats } from "./components/portfolio/Stats";
 import { About } from "./components/portfolio/About";
 import { Approach } from "./components/portfolio/Approach";
 import { Education } from "./components/portfolio/Education";
+import { Experience } from "./components/portfolio/Experience";
 import { Skills } from "./components/portfolio/Skills";
 import { Projects } from "./components/portfolio/Projects";
 import { Resume } from "./components/portfolio/Resume";
@@ -23,6 +24,7 @@ export default function App() {
         <About />
         <Approach />
         <Education />
+        <Experience />
         <Skills />
         <Projects />
         <Resume />

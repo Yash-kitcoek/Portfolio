@@ -10,7 +10,7 @@ const certs = [
 
 export function Certifications() {
   return (
-    <Section id="certifications" index="07" eyebrow="Certifications" title="Continuous Learning">
+    <Section id="certifications" index="08" eyebrow="Certifications" title="Continuous Learning">
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto">
         {certs.map((c, i) => (
           <motion.div

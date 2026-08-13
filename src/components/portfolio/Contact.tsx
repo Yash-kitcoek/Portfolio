@@ -63,7 +63,7 @@ export function Contact() {
   };
 
   return (
-    <Section id="contact" index="08" eyebrow="Contact" title="Let's Build Together" subtitle="Have an opportunity, project, or just want to say hi? Drop a message.">
+    <Section id="contact" index="09" eyebrow="Contact" title="Let's Build Together" subtitle="Have an opportunity, project, or just want to say hi? Drop a message.">
       <div className="grid lg:grid-cols-5 gap-8 max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, x: -20 }}

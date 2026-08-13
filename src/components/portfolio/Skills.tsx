@@ -13,7 +13,7 @@ const groups = [
 
 export function Skills() {
   return (
-    <Section id="skills" index="04" eyebrow="Skills" title="Tech Stack & Toolkit" subtitle="Technologies I build with and concepts I'm deepening.">
+    <Section id="skills" index="05" eyebrow="Skills" title="Tech Stack & Toolkit" subtitle="Technologies I build with and concepts I'm deepening.">
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
         {groups.map((g, i) => (
           <motion.div
