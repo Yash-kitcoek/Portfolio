@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Github, Linkedin, Code2, ArrowRight, Download, Mail } from "lucide-react";
 import { useEffect, useState } from "react";
-import avatar from "@/assets/avatar.png";
+const AVATAR_URL = "https://github.com/Yash-kitcoek.png";
 
 const titles = ["Full-Stack Developer", "AI/ML Engineer", "Systems Builder", "Problem Solver"];
 
@@ -100,7 +100,7 @@ export function Hero() {
             >
               <div className="w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-[2rem] p-1.5 bg-gradient-primary shadow-glow">
                 <img
-                  src={avatar}
+                  src={AVATAR_URL}
                   alt="Yash Gaikwad"
                   width={768}
                   height={768}
